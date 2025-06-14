@@ -49,8 +49,6 @@
   {"name": "Costa do Marfim", "code": "CI", "feed": "https://www.fratmat.ci/rss"}, 
   {"name": "Costa Rica", "code": "CR", "feed": "https://www.nacion.com/rss/"}, 
   {"name": "Croácia", "code": "HR", "feed": "https://www.hrt.hr/hrt-rss/"} 
-]
-[
   {"name": "Croácia", "code": "HR", "feed": "https://www.hrt.hr/hrt-rss/"}, 
   {"name": "Cuba", "code": "CU", "feed": "https://www.granma.cu/feed/"}, 
   {"name": "Dinamarca", "code": "DK", "feed": "https://www.dr.dk/nyheder/service/feeds/aller.sidste.rss.xml"}, 
@@ -104,8 +102,6 @@
   {"name": "Letônia", "code": "LV", "feed": "https://www.delfi.lv/rss/"}, 
   {"name": "Líbano", "code": "LB", "feed": "https://english.alarabiya.net/rss/"}, 
   {"name": "Líbia", "code": "LY", "feed": "https://www.lananews.net.ly/rss/"} 
-]
-[
   {"name": "Lituânia", "code": "LT", "feed": "https://www.delfi.lt/rss/"}, 
   {"name": "Luxemburgo", "code": "LU", "feed": "https://www.rtl.lu/rss/"}, 
   {"name": "Madagascar", "code": "MG", "feed": "https://midimadagasikara.mg/rss/"}, 
@@ -157,8 +153,6 @@
   {"name": "El Salvador", "code": "SV", "feed": "https://lapagina.com.sv/rss/"}, 
   {"name": "Samoa", "code": "WS", "feed": "https://samoaobserver.ws/feed/"}, 
   {"name": "San Marino", "code": "SM", "feed": "https://smrtv.sm/en/news/rss/"} 
-]
-[
   {"name": "São Cristóvão e Névis", "code": "KN", "feed": "https://kittscaribbean.com/feed/"}, 
   {"name": "São Tomé e Príncipe", "code": "ST", "feed": "https://jornaldamadeira.pt/rss/"}, 
   {"name": "São Vicente e Granadinas", "code": "VC", "feed": "https://searchlight.vc/feed/"}, 

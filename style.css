@@ -10,7 +10,7 @@ body {
   background-image: url('imagem/ProjectRimuruBackplate.png');
   background-size: cover;
   color: #eee;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 header {

@@ -13,6 +13,29 @@ fetch('data/countries.json')
     });
   });
 
+document.getElementById('countrySelect').addEventListener('change', function () {
+  const feedUrl = this.value;
+  if (!feedUrl) return;
+
+  fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`)
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById('newsFeed');
+      container.innerHTML = '';
+      if (data.status !== 'ok') return container.innerHTML = '<p>Erro ao carregar feed.</p>';
+
+      data.items.slice(0, 10).forEach(item => {
+        const article = document.createElement('article');
+        article.innerHTML = `
+          <h3><a href="${item.link}" target="_blank">${item.title}</a></h3>
+          <small>${new Date(item.pubDate).toLocaleString()}</small>
+          <p>${item.description.substring(0, 150)}...</p>
+        `;
+        container.appendChild(article);
+      });
+    });
+});
+
 // Troca de seções
 function loadSection(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.add('hidden'));

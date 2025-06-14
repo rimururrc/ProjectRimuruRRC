@@ -6,25 +6,105 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Header com imagem -->
   <header>
-    <h1>Project RimuruRRC</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="chatsai.html">ChatsAI</a></li>
-        <li><a href="maritima.html">Pesquisa Marítima</a></li>
-        <li><a href="operacional.html">Pesquisa Operacional</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </nav>
+    <img src="imagens/ProjectRimuruTop.png" alt="Logo do Projeto" id="logo-top" />
   </header>
 
-  <main>
-    <section class="country-selector">
+  <!-- Menu principal -->
+  <nav id="main-nav">
+    <ul>
+      <li><button onclick="loadSection('inicio')">Início</button></li>
+      <li><button onclick="loadSection('chatsai')">ChatsAI</button></li>
+      <li><button onclick="loadSection('maritima')">Pesquisa Marítima</button></li>
+      <li><button onclick="loadSection('operacional')">Pesquisa Operacional</button></li>
+      <li><button onclick="loadSection('sobre')">Sobre</button></li>
+      <li><button id="auth-btn" onclick="toggleLogin()">Login</button></li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo dinâmico -->
+  <main id="app">
+    <!-- Início carregado por padrão -->
+    <section id="inicio" class="page active">
       <h2>Escolha um país para ver as últimas notícias:</h2>
       <select id="countrySelect"></select>
       <div id="newsFeed"></div>
+    </section>
+
+    <!-- ChatsAI -->
+    <section id="chatsai" class="page hidden">
+      <h2>ChatsAI</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>IA</th>
+            <th>Categoria</th>
+            <th>Descrição</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Beautiful AI</td>
+            <td>Apresentação</td>
+            <td>Cria apresentações incríveis automaticamente</td>
+          </tr>
+          <tr>
+            <td>Qwen</td>
+            <td>Criação</td>
+            <td>Ideal para criação de textos criativos</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Pesquisa Marítima -->
+    <section id="maritima" class="page hidden">
+      <h2>Pesquisa Marítima</h2>
+      <p><a href="https://mar-links.netlify.app/"  target="_blank">Acessar site externo</a></p>
+    </section>
+
+    <!-- Pesquisa Operacional -->
+    <section id="operacional" class="page hidden">
+      <h2>Pesquisa Operacional</h2>
+      <p><a href="https://pesqope.netlify.app/"  target="_blank">Acessar site externo</a></p>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="page hidden">
+      <h2>Sobre o Project RimuruRRC</h2>
+      <p>O Project RimuruRRC é uma plataforma experimental que reúne inteligências artificiais, feeds de notícias globais e ferramentas especializadas para pesquisa e aprendizado colaborativo.</p>
+    </section>
+
+    <!-- Login / Painel de Edição -->
+    <section id="login-panel" class="page hidden">
+      <form id="login-form" onsubmit="login(event)">
+        <h3>Login</h3>
+        <label for="user">Usuário:</label>
+        <input type="text" id="user" required />
+
+        <label for="pass">Senha:</label>
+        <input type="password" id="pass" required />
+
+        <button type="submit">Entrar</button>
+      </form>
+
+      <div id="edit-panel" class="hidden">
+        <h3>Painel de Edição</h3>
+        <h4>Adicionar Site de Notícias</h4>
+        <form id="add-feed-form">
+          <label for="country">País:</label>
+          <select name="country" id="country">
+            <!-- Preencher via JS -->
+          </select>
+
+          <label for="feed">Link do Feed RSS:</label>
+          <input type="url" name="feed" id="feed" required />
+
+          <button type="submit">Adicionar</button>
+        </form>
+        <button onclick="logout()">Logout</button>
+      </div>
     </section>
   </main>
 

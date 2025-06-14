@@ -1,0 +1,24 @@
+<h2>Login</h2>
+<form onsubmit="login(event)">
+  <label for="user">Usuário:</label>
+  <input type="text" id="user" required />
+
+  <label for="pass">Senha:</label>
+  <input type="password" id="pass" required />
+
+  <button type="submit">Entrar</button>
+</form>
+
+<script>
+function login(e) {
+  e.preventDefault();
+  const user = document.getElementById('user').value;
+  const pass = document.getElementById('pass').value;
+
+  if (user === 'rimururrc' && pass === 'Tespest071190!@') {
+    window.location.href = 'editInicio.html';
+  } else {
+    alert('Login inválido!');
+  }
+}
+</script>

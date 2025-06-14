@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Brasil",
+    "code": "BR",
+    "feed": "https://g1.globo.com/rss/g1/" 
+  },
+  {
+    "name": "Estados Unidos",
+    "code": "US",
+    "feed": "https://rss.cnn.com/rss/cnn_topstories.rss" 
+  },
+  {
+    "name": "Reino Unido",
+    "code": "GB",
+    "feed": "https://www.bbc.com/news/rss.xml" 
+  }
+]

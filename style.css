@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 1em;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+.country-selector {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+article {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+article h3 {
+  margin: 0;
+}

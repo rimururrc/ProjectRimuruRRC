@@ -81,3 +81,55 @@ function logout() {
 function toggleLogin() {
   loadSection('login-panel');
 }
+// Função para validar feeds RSS
+function validateRSSFeed(url, callback) {
+  const proxy = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(url);
+
+  fetch(proxy)
+    .then(res => res.json())
+    .then(data => {
+      if (data.status === "ok" && data.items.length > 0) {
+        callback(url, true);
+      } else {
+        callback(url, false);
+      }
+    })
+    .catch(err => {
+      console.error(`Erro no feed: ${url}`, err);
+      callback(url, false);
+    });
+}
+
+// Valida todos os feeds do countries.json
+function validateAllFeeds() {
+  fetch('data/countries.json')
+    .then(res => res.json())
+    .then(countries => {
+      const results = [];
+
+      countries.forEach(country => {
+        validateRSSFeed(country.feed, (feedUrl, isValid) => {
+          results.push({
+            name: country.name,
+            feed: feedUrl,
+            valid: isValid
+          });
+
+          // Quando terminar todas as requisições
+          if (results.length === countries.length) {
+            console.log("Resultado da verificação:");
+            console.table(results);
+
+            // Mostra apenas feeds inválidos
+            const invalids = results.filter(r => !r.valid);
+            if (invalids.length > 0) {
+              alert(`${invalids.length} feeds estão com problemas!`);
+              console.warn("Feeds inválidos:", invalids);
+            } else {
+              alert("✅ Todos os feeds estão funcionando!");
+            }
+          }
+        });
+      });
+    });
+}

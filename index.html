@@ -8,7 +8,7 @@
 <body>
   <!-- Header com imagem -->
   <header>
-    <img src="imagem/ProjectRimuruTop.png" alt="Logo do Projeto" id="logo-top" />
+    <img src="imagens/ProjectRimuruTop.png" alt="Logo do Projeto" id="logo-top" />
   </header>
 
   <!-- Menu principal -->
@@ -16,8 +16,8 @@
     <ul>
       <li><button onclick="loadSection('inicio')">Início</button></li>
       <li><button onclick="loadSection('chatsai')">ChatsAI</button></li>
-      <li><button onclick="loadSection('maritima')">Pesquisa Marítima</button><a href="https://mar-links.netlify.app/"  target="_blank"></a></li>
-      <li><button onclick="loadSection('operacional')">Pesquisa Operacional</button><a href="https://pesqope.netlify.app/"  target="_blank"></a></li>
+      <li><button onclick="goToMaritima()">Pesquisa Marítima</button></li>
+      <li><button onclick="goToOperacional()">Pesquisa Operacional</button></li>
       <li><button onclick="loadSection('sobre')">Sobre</button></li>
       <li><button id="auth-btn" onclick="toggleLogin()">Login</button></li>
     </ul>
@@ -25,7 +25,7 @@
 
   <!-- Conteúdo dinâmico -->
   <main id="app">
-    <!-- Início carregado por padrão -->
+    <!-- Início -->
     <section id="inicio" class="page active">
       <h2>Escolha um país para ver as últimas notícias:</h2>
       <select id="countrySelect"></select>
@@ -60,8 +60,8 @@
 
     <!-- Sobre -->
     <section id="sobre" class="page hidden">
-      <h2>Sobre o Project Rimuru</h2>
-      <p>O Project Rimuru é uma plataforma experimental que reúne inteligências artificiais, feeds de notícias globais e ferramentas especializadas para pesquisa e aprendizado colaborativo.</p>
+      <h2>Sobre o Project RimuruRRC</h2>
+      <p>O Project RimuruRRC é uma plataforma experimental que reúne inteligências artificiais, feeds de notícias globais e ferramentas especializadas para pesquisa e aprendizado colaborativo.</p>
     </section>
 
     <!-- Login / Painel de Edição -->

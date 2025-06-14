@@ -19,6 +19,15 @@ function loadSection(id) {
   document.getElementById(id).classList.remove('hidden');
 }
 
+// Redirecionamentos diretos
+function goToMaritima() {
+  window.location.href = "https://mar-links.netlify.app/"; 
+}
+
+function goToOperacional() {
+  window.location.href = "https://pesqope.netlify.app/"; 
+}
+
 // Login
 function login(e) {
   e.preventDefault();

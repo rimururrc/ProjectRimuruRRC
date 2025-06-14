@@ -1,5 +1,5 @@
 [
-  {"name": "Afeganistão", "code": "AF", "feed": "https://tolonews.com/"}, 
+  {"name": "Afeganistão", "code": "AF", "feed": "https://tolonews.com/index.rss"}, 
   {"name": "África do Sul", "code": "ZA", "feed": "https://rss.news24.com/rss"}, 
   {"name": "Albânia", "code": "AL", "feed": "https://topchannel.tv.al/feed/"}, 
   {"name": "Alemanha", "code": "DE", "feed": "https://www.spiegel.de/international/index.rss"}, 

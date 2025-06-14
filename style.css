@@ -91,3 +91,20 @@ article {
 article h3 {
   margin: 0;
 }
+
+/* Estilização dos links de notícia */
+#newsFeed a {
+  color: #6aa3d6; /* Azul claro */
+  text-decoration: none;
+}
+
+/* Links já visitados */
+#newsFeed a:visited {
+  color: #ffffff; /* Branco */
+}
+
+/* Links no hover (opcional) */
+#newsFeed a:hover {
+  color: #9ec1cf;
+  text-decoration: underline;
+}
